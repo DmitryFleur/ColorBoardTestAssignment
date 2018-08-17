@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test assignment for UVIK PYTHON AGENCY</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div class="col-6">
+        <h3>Test assignment for UVIK PYTHON AGENCY</h3>
+        {% if result %}
+            <h1>{{ result }}</h1>
+        {% endif %}
+
+        {% if form.errors %}
+            <p class="text-danger">
+                Please correct the errors {{ form.errors }}.
+            </p>
+        {% endif %}
+
+        <form action="" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="{{ csrf_token }}">
+            {{ form }}
+            <input type="submit" value="Submit" class="btn btn-primary" style="margin:1%">
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
